@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import * as Font from "expo-font";
+import { StatusBar } from "expo-status-bar";
 
 import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -10,7 +11,7 @@ import Colors from "./constants/colors";
 import * as SplashScreen from "expo-splash-screen";
 
 // Keep the splash screen visible while we fetch resources
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const [isGameOver, setIsGameOver] = useState(false);
@@ -77,6 +78,7 @@ export default function App() {
 
   return (
     <>
+      <StatusBar style="dark" />
       <LinearGradient
         style={styles.root}
         colors={[Colors.primary700, Colors.accent500]}

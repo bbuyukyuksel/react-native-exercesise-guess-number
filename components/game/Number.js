@@ -12,7 +12,6 @@ const Number = ({ children }) => {
 export default Number;
 
 const deviceWidth = Dimensions.get("window").width;
-const deviceHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {

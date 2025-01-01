@@ -1,4 +1,4 @@
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, Platform } from "react-native";
 import colors from "../../constants/colors";
 
 const Title = ({ children }) => {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     color: colors.accent500,
     textAlign: "center",
     padding: 16,
-    borderWidth: 1,
+    borderWidth: Platform.select({ ios: 1, android: 2 }),
     borderColor: colors.accent500,
     borderRadius: 8,
     boxShadow: `0 0 4px ${colors.accent500}`,
